@@ -1,0 +1,172 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* Reset da página */
+* {
+    font-family: "Lato", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Variavéis de estilo padrão */
+:root {
+    --bg-primary: #040222;
+    --bg-cards: #0a072d;
+    --text: #e4e1fe;
+    --primary: #826df8;
+    --secundary: #a6088e;
+    --accent: #f42a85;
+    /* Hovers */
+    --primary-hover: #002fff;
+    --secundary-hover: #ff02d9;
+}
+
+
+/* Variavéis de estilo claro */
+:root[theme="light"] {
+    --bg-primary: #dfddfd;
+    --bg-cards: #d4d1f7;
+    --text: #04011e;
+    --primary: #1c0792;
+    --secundary: #f759e0;
+    --accent: #d50b66;
+    /* Hovers */
+    --primary-hover: #002fff;
+    --secundary-hover: #ff00d9;
+}
+
+
+/* Estilo da página ao todo */
+html,
+body {
+    background-color: var(--bg-primary);
+    scroll-behavior: smooth;
+    transition: 1.0s ease;
+    color: var(--text);
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Estilo padrão das tags */
+h1,
+h2,
+h3 {
+    font-family: "Arvo", serif;
+    font-style: normal;
+}
+
+
+p,
+span {
+    font-size: clamp(16px, 2rem, 20px);
+    color: var(--text);
+}
+
+
+li {
+    list-style: none;
+}
+
+
+a {
+    text-decoration: transparent;
+    transition: 0.5s ease;
+    color: var(--text);
+}
+
+
+button,
+input,
+textarea {
+    border: solid 2px var(--bg-cards);
+    transition: 0.6s ease;
+    border-radius: 25px;
+    color: var(--text);
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+figure,
+video,
+img {
+    border-radius: 25px;
+    height: auto;
+}
+
+
+/* Animações e hovers */
+a:hover {
+    color: var(--accent);
+}
+
+
+/* Estilo do cabeçalho da página */
+header {
+    background-color: var(--bg-primary);
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    position: sticky;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+}
+
+
+header .logo {
+    align-items: center;
+    display: flex;
+    gap: 5px;
+}
+
+
+header .logo img {
+    pointer-events: none;
+    width: 35px;
+}
+
+
+header .logo h1 {
+    font-size: clamp(24px, 3vw, 28px);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+
+header .logo h1:hover {
+    color: var(--accent);
+}
+
+
+header nav {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+}
+
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+
+header nav button {
+    background-color: var(--bg-cards);
+    align-items: center;
+    padding: 8px 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+header nav button p {
+    color: var(--text);
+}
